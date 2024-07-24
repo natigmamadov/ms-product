@@ -61,7 +61,7 @@ public class ProductServiceHandler implements ProductService {
     @Override
     public void deleteProduct(Long id) {
         var productEntity = fetchIfExists(id);
-        productEntity.setProductStatus(DELETED);
+        productEntity.setProductStatus(DELETED);  
         productRepository.save(productEntity);
     }
 
